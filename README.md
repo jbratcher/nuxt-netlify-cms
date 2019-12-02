@@ -1,6 +1,8 @@
 # nuxt-netlify-cms
 
-> My ultimate Nuxt.js project
+> Nuxt Netlify CMS Static Site Generator
+
+To change netlify deploy url, run `localStorage.removeItem("netlifySiteURL")` in the browser console.
 
 ## Build Setup
 

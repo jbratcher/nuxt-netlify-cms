@@ -1,6 +1,21 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  modules: ['@nuxtjs/markdownit'],
+  markdownit: {
+    injected: true,
+  },
+  generate: {
+    routes: function () {
+      const fs = require('fs');
+      return fs.readdirSync('./assets/content/blog').map(file => {
+        return {
+          route: `/blog/${file.slice(2, -5)}`, // Remove the .json from the end of the filename
+          payload: require(`./assets/content/blog/${file}`),
+        };
+      });
+    },
+  },
   mode: 'spa',
   /*
   ** Headers of the page

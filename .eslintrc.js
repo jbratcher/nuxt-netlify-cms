@@ -15,5 +15,7 @@ module.exports = {
   rules: {
     'comma-dangle': 'off',
     'semi': 'off',
+    'arrow-parens': 'off',
+    'object-shorthand': 'off',
   }
 }
